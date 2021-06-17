@@ -1,0 +1,310 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- main style sheet -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+
+<!-- navbar -->
+<nav id="navbar">
+  <header>Java Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#Basic_Syntax">Basic Syntax</a></li>
+    <li>
+      <a class="nav-link" href="#Objects_&_Classes">Objects & Classes</a>
+    </li>
+    <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+    <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+    <li><a class="nav-link" href="#Basic_Operators">Basic Operators</a></li>
+    <li><a class="nav-link" href="#Loop_Control">Loop Control</a></li>
+    <li><a class="nav-link" href="#Strings">Strings</a></li>
+    <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+    <li><a class="nav-link" href="#Regular_Expressions">Regular Expressions</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+
+  <!-- main-section introduction -->
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        Java is a high-level programming language originally developed by Sun Microsystems and released in 1995. Java runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX.
+      </p>
+
+      <p>
+        <strong> Why to Learn java Programming? </strong>
+      </p>
+      <ul>
+        <li>
+          <strong> Object Oriented </strong> − In Java, everything is an Object. Java can be easily extended since it is based on the Object model.
+        </li>
+        <li>
+          <strong> Platform Independent </strong> − Unlike many other programming languages including C and C++, when Java is compiled, it is not compiled into platform specific machine, rather into platform independent byte code. This byte code is distributed over the web and interpreted by the Virtual Machine (JVM) on whichever platform it is being run on.
+        </li>
+        <li>
+          <strong> Simple </strong> − Java is designed to be easy to learn. If you understand the basic concept of OOP Java, it would be easy to master.
+        </li>
+        <li>
+          <strong> Secure </strong> − With Java's secure feature it enables to develop virus-free, tamper-free systems. Authentication techniques are based on public-key encryption.
+        </li>
+        <li>
+          <strong> Architecture-Neutral </strong> − Java compiler generates an architecture-neutral object file format, which makes the compiled code executable on many processors, with the presence of Java runtime system.
+        </li>
+        <li>
+          <strong> Portable </strong> − Being architecture-neutral and having no implementation dependent aspects of the specification makes Java portable. Compiler in Java is written in ANSI C with a clean portability boundary, which is a POSIX subset.
+        </li>
+        <li>
+          <strong> Robust </strong> − Java makes an effort to eliminate error prone situations by emphasizing mainly on compile time error checking and runtime checking.
+        </li>
+      </ul>
+      <p>
+        Java is an Object-Oriented Language. As a language that has the Object-Oriented feature, Java supports the following fundamental concepts −
+      <ul>
+        <li>Polymorphism</li>
+        <li>Inheritance</li>
+        <li>Encapsulation</li>
+        <li>Abstraction</li>
+        <li>Classes</li>
+        <li>Objects</li>
+        <li>Instance</li>
+        <li>Method</li>
+        <li>Message Passing</li>
+      </ul>
+      </p>
+    </article>
+  </section>
+
+  <!-- Basic Syntax -->
+  <section class="main-section" id="Basic_Syntax">
+    <header>Basic Syntax</header>
+    <article>
+      <p>When we consider a Java program, it can be defined as a collection of objects that communicate via invoking each other's methods.</p>
+
+      <ul>
+        <li>
+          <strong> Case Sensitivity </strong> − Java is case sensitive, which means identifier Hello and hello would have different meaning in Java.
+        </li>
+        <li>
+          <strong> Class Names </strong> − For all class names the first letter should be in Upper Case. If several words are used to form a name of the class, each inner word's first letter should be in Upper Case.
+        </li>
+        <li>
+          <strong> Method Names </strong> − All method names should start with a Lower Case letter. If several words are used to form the name of the method, then each inner word's first letter should be in Upper Case.
+        </li>
+        <li>
+          <strong> Program File Name </strong> − Name of the program file should exactly match the class name.
+
+          When saving the file, you should save it using the class name (Remember Java is case sensitive) and append '.java' to the end of the name (if the file name and the class name do not match, your program will not compile).
+
+          But please make a note that in case you do not have a public class present in the file then file name can be different than class name. It is also not mandatory to have a public class in the file.
+        </li>
+      </ul>
+    </article>
+  </section>
+
+<!-- Objects & Classes -->
+  <section class="main-section" id="Objects_&_Classes">
+    <header>Objects & Classes</header>
+      <p>
+      <ul>
+        <li> <strong> Object </strong> − Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors – wagging the tail, barking, eating. An object is an instance of a class.
+        </li>
+
+        <li> <strong> Class </strong> − A class can be defined as a template/blueprint that describes the behavior/state that the object of its type support.
+        </li>
+      </ul>
+      </p>
+
+      <p>
+        Objects in Java
+        Let us now look deep into what are objects. If we consider the real-world, we can find many objects around us, cars, dogs, humans, etc. All these objects have a state and a behavior.
+
+        If we consider a dog, then its state is - name, breed, color, and the behavior is - barking, wagging the tail, running.
+
+        If you compare the software object with a real-world object, they have very similar characteristics.
+
+        Software objects also have a state and a behavior. A software object's state is stored in fields and behavior is shown via methods.
+
+        So in software development, methods operate on the internal state of an object and the object-to-object communication is done via methods.
+      </p>
+
+      <p>
+        Classes in Java
+        A class is a blueprint from which individual objects are created.
+
+        Following is a sample of a class:
+        <code>public class Dog {
+          String breed;
+          int age;
+          String color;
+          void barking() {
+          }
+          void hungry() {
+          }
+          void sleeping() {
+          }
+          }
+        </code>
+      </p>
+  </section>
+
+  <!-- hello world -->
+  <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <p>
+      To get started with writing JavaScript, open the Scratchpad and write your
+      first "Hello world" JavaScript code:
+    </p>
+    <code>
+      class HelloWorld {
+      public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      }
+      }
+    </code>
+  </section>
+
+  <!-- Data Types -->
+  <section class="main-section" id="Data_Types">
+    <header>Data Types</header>
+    <p>
+      Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in the memory.
+
+      Based on the data type of a variable, the operating system allocates memory and decides what can be stored in the reserved memory. Therefore, by assigning different data types to variables, you can store integers, decimals, or characters in these variables.
+
+      There are two data types available in Java −
+    <ul>
+      <li>Primitive Data Types</li>
+      <li>Reference/Object Data Types</li>
+    </ul>
+    </p>
+    <p>
+      There are eight primitive datatypes supported by Java. Primitive datatypes are predefined by the language and named by a keyword.
+
+    <ul>
+      <li>byte</li>
+      <li>short</li>
+      <li>int</li>
+      <li>long</li>
+      <li>float</li>
+      <li>double</li>
+      <li>boolean</li>
+      <li>char</li>
+    </ul>
+    </p>
+  </section>
+
+  <!-- Basic Operators -->
+  <section class="main-section" id="Basic_Operators">
+    <header>Basic Operators</header>
+    <p>
+      Java provides a rich set of operators to manipulate variables. We can divide all the Java operators into the following groups −
+
+    <ul>
+      <li>Arithmetic Operators</li>
+      <li>Relational Operators</li>
+      <li>Bitwise Operators</li>
+      <li>Logical Operators</li>
+      <li>Assignment Operators</li>
+      <li>Misc Operators</li>
+    </ul>
+    </p>
+  </section>
+
+  <!-- Loop Control -->
+  <section class="main-section" id="Loop_Control">
+    <header>Loop Control</header>
+    <p>There may be a situation when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.
+
+      Programming languages provide various control structures that allow for more complicated execution paths.
+
+      A loop statement allows us to execute a statement or group of statements multiple times.
+
+    <ul>
+      <li> <strong> while loop </strong> - Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.<code>while(Boolean_expression) {
+          // Statements
+          }</code></li>
+      <li> <strong> for loop </strong> - Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable.<code>for(initialization; Boolean_expression; update) {
+          // Statements
+          }</code></li>
+      <li> <strong> do...while loop </strong> - Like a while statement, except that it tests the condition at the end of the loop body.<code>do {
+          // Statements
+          }while(Boolean_expression);</code></li>
+      <li> <strong> enhanced for loop </strong> - This is mainly used to traverse collection of elements including arrays.<code>for(declaration : expression) {
+          // Statements
+          }</code></li>
+    </ul>
+    </p>
+  </section>
+
+  <!-- Strings -->
+  <section class="main-section" id="Strings">
+    <header>Strings</header>
+    <p>
+      Strings, which are widely used in Java programming, are a sequence of characters. In Java programming language, strings are treated as objects.
+
+      The Java platform provides the String class to create and manipulate strings.
+    </p>
+    <code>String greeting = "Hello world!";</code>
+    <p>
+      Whenever it encounters a string literal in your code, the compiler creates a String object with its value in this case, "Hello world!'.
+
+      As with any other object, you can create String objects by using the new keyword and a constructor. The String class has 11 constructors that allow you to provide the initial value of the string using different sources, such as an array of characters.
+    </p>
+  </section>
+
+<!-- Arrays  -->
+  <section class="main-section" id="Arrays">
+    <header>Arrays</header>
+      <p>
+        Java provides a data structure, the array, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
+
+Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables.     
+    </p>
+    <p>
+        To use an array in a program, you must declare a variable to reference the array, and you must specify the type of array the variable can reference. Here is the syntax for declaring an array variable −
+      </p>
+    <code>dataType[] arrayRefVar;   // preferred way
+or
+dataType arrayRefVar[];  // works but not preferred way</code>
+  </section>
+
+  <section class="main-section" id="Regular_Expressions">
+    <header>Regular Expressions</header>
+Java provides the java.util.regex package for pattern matching with regular expressions. Java regular expressions are very similar to the Perl programming language and very easy to learn.
+
+A regular expression is a special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern. They can be used to search, edit, or manipulate text and data.
+
+The java.util.regex package primarily consists of the following three classes −
+
+    <ul>
+<li><strong> Pattern Class </strong> − A Pattern object is a compiled representation of a regular expression. The Pattern class provides no public constructors. To create a pattern, you must first invoke one of its public static compile() methods, which will then return a Pattern object. These methods accept a regular expression as the first argument.</li> 
+
+<li><strong> Matcher Class </strong>− A Matcher object is the engine that interprets the pattern and performs match operations against an input string. Like the Pattern class, Matcher defines no public constructors. You obtain a Matcher object by invoking the matcher() method on a Pattern object.</li> 
+
+    <li><strong> PatternSyntaxException </strong> − A PatternSyntaxException object is an unchecked exception that indicates a syntax error in a regular expression pattern. </li>
+    </ul>
+  </section>
+
+<!-- Reference -->
+ <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">Tutorials Point</a>.
+        </li>
+      </ul>
+    </article>
+  </section>
